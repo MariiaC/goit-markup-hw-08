@@ -1,0 +1,48 @@
+/*скидываем точки возле списка и марджины для ul*/ 
+.list {
+    list-style: none;
+}
+
+/*«B1» глобальне скидання стилів <h1>...<h6>, <p>і <ul>.*/
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/*скидываем подчеркивания линков*/
+.link {
+    text-decoration: none;
+}
+
+/*текст тега р*/
+.text {
+    color: $secondary-text;
+}
+
+/*«B15» Для всіх .section padding верх низ 94 */
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/*body */
+body {
+    background-color: $primary-background;
+    color: $primary-text;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.03em;
+    margin: 0 auto;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}

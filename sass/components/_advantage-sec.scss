@@ -1,0 +1,49 @@
+/*вторая секция advantage*/
+.advantage {
+  &__list {
+    width: 270;
+
+  &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__background {
+    background-color: $secondary-background;
+    width: 270px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+  
+  &__icon {
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    fill: $primary-text;
+  }
+}
+
+
+.advantage-name {
+  display: none;
+
+  &__item {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.advantage-content {
+  display: flex;
+}

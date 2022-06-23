@@ -1,0 +1,228 @@
+/*footer*/
+.footer {
+  background-color: $footer-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+}
+
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+
+.address {
+  width: 231px;
+  margin-right: 70px;
+}
+
+.nav-footer__address {
+  min-width: 231px;
+
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+
+.address__logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  min-width: 145px;
+  margin-bottom: 20px;
+}
+
+.address__logo > .address__web-logo {
+  color: $accent;
+}
+
+.address__logo > .address__studio-logo {
+  color: $primary-background;
+}
+
+.nav-footer__street {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: $primary-background;
+
+  transition: color 250ms $timng-function;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+.nav-footer__contact {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms $timng-function;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+}
+
+/*social links footer*/
+
+.join-cotainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 206px;
+  height: 80px;
+  margin-top: 72px;
+  margin-bottom: 100px;
+}
+
+.join {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  line-height: 1.14;
+  color: $primary-background;
+  margin-bottom: 20px;
+}
+
+.member-list {
+  display: flex;
+
+  &__icon {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition: background-color 250ms $timng-function;
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.member-list__icon-item {
+  width: 20px;
+  height: 20px;
+  fill: $primary-background;
+
+  transition: fill 250ms $timng-function;
+
+  &:hover,
+  &:focus {
+    fill: $primary-background;
+  }
+}
+
+/*FOOTER Форма ДЗ 6*/
+.footer-form {
+  display: inline-flex;
+  width: 570px;
+  height: 86px;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+  margin-left: 93px;
+
+  &__send {
+    fill: $primary-background;
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+}
+
+.footer-field {
+  display: flex;
+  flex-wrap: wrap;
+  width: 570px;
+  height: 86px;
+}
+
+.footer-field .footer-form__input::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form__sign-in {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  line-height: 1.14;
+  color: $primary-background;
+  margin-bottom: 20px;
+}
+
+.footer-form__input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-color;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: $primary-background;
+
+  transition: border-color 250ms $timng-function;
+
+  &:hover,
+  &:focus {
+    border-color: $primary-background;
+  }
+}
+
+.footer-form__button {
+  width: 250px;
+  height: 50px;
+  padding: 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background-color: $accent;
+  color: $secondary-background;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0px solid transparent;
+  border-radius: 4px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: background-color 250ms $timng-function;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    cursor: pointer;
+  }
+}

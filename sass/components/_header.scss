@@ -1,0 +1,129 @@
+/*page-header*/
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    color: $primary-text;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-right: 93px;
+  }
+
+  &__web {
+    color: $accent;
+  }
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* список навигации header*/
+.site-nav {
+  display: flex;
+}
+
+.site-nav {
+  &__item {
+    margin-right: 50px;
+    position: relative;
+  }
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-nav {
+  &__link {
+    color: $primary-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    /*Переход*/
+    transition: color 250ms $timng-function;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+/* список контактов header*/
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+
+  &__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contact-nav {
+  &__link {
+    display: flex;
+    color: $secondary-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $timng-function;
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+  }
+}
+
+/*иконки header*/
+.contact-nav {
+  &__icon-envelope {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  &__icon-smartphone {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;
+  }
+}
+
+/*Подчеркивание*/
+
+.site-nav {
+  &__current-page {
+    display: block;
+    position: relative;
+  }
+}
+
+.site-nav {
+  &__current-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+    left: 0;
+    bottom: -31px;
+  }
+}

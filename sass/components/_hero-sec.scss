@@ -1,50 +1,81 @@
 /*первая секция Hero*/
 
 .hero {
-    height: 600px;
-    max-width: 1600px;
+    height: 400px;
+    //max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 200px;
-    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    //padding-bottom: 200px;
+    // padding-top: 200px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background: #c4c4c4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url('../images/hero-img.jpg');
 
-&__title {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.4;
-    text-align: center;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    color: $primary-background;
-}
+    @media screen and (min-width:480px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url('../images/hero/hero1x-mobile.jpg, ../images/hero/hero2x-mobile.jpg');
+    }
 
-/*main-button для index.html */
-&__button {
-    background-color: $accent;
-    color: $secondary-background;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 200px;
-    padding: 10px 32px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border: 1px solid transparent;
-}
+    @media screen and (min-width:768px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url('../images/hero/hero1x-tablet.jpg, ../images/hero/hero2x-tablet.jpg');
+    }
+
+    @media screen and (min-width:1200px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url('../images/hero/hero1x-desktop.jpg, ../images/hero/hero2x-desktop.jpg');
+    }
+
+
+    &__title {
+        display: block;
+        margin: 0 auto 30px;
+
+        font-weight: 900;
+        /*font-size: 44px;*/
+        font-size: 26px;
+        /*line-height: 1.4;*/
+        line-height: 1.62;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        //margin-bottom: 30px;
+        color: $primary-background;
+
+        @media screen and (min-width: 768px) {
+            font-size: 44px;
+
+
+        }
+    }
+
+    /*main-button для index.html */
+    &__button {
+        background-color: $accent;
+        color: $secondary-background;
+        font-family: inherit;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.9;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        /* min-width: 200px;*/
+        padding: 10px 32px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: 1px solid transparent;
+    }
+
 }

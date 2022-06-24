@@ -1,26 +1,31 @@
 /*footer*/
 .footer {
   background-color: $footer-color;
+  display: flex;
+  flex-wrap: wrap;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
+  // padding-top: 60px;
+  //padding-bottom: 60px;
 }
 
 .footer__container {
   display: flex;
   align-items: baseline;
+  text-align: center;
+  justify-content: center;
 }
 
 .address {
-  width: 231px;
-  margin-right: 70px;
+  //width: 231px;
+  //margin-right: 70px;
 }
 
 .nav-footer__address {
-  min-width: 231px;
+  // min-width: 231px;
 
   &:not(:last-child) {
-    margin-bottom: 9px;
+    //margin-bottom: 9px;
   }
 }
 
@@ -28,17 +33,17 @@
   display: inline-block;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
-  min-width: 145px;
+  //min-width: 145px;
   margin-bottom: 20px;
 }
 
-.address__logo > .address__web-logo {
+.address__logo>.address__web-logo {
   color: $accent;
 }
 
-.address__logo > .address__studio-logo {
+.address__logo>.address__studio-logo {
   color: $primary-background;
 }
 
@@ -79,10 +84,10 @@
 .join-cotainer {
   display: flex;
   flex-wrap: wrap;
-  width: 206px;
-  height: 80px;
-  margin-top: 72px;
-  margin-bottom: 100px;
+  //width: 206px;
+  //height: 80px;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .join {
@@ -199,9 +204,9 @@
 }
 
 .footer-form__button {
-  width: 250px;
+  min-width: 200px;
   height: 50px;
-  padding: 0;
+  padding: 10px 28px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;

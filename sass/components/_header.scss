@@ -1,12 +1,17 @@
 /*page-header*/
 
 .header {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 24px;
+
+  @media screen and (min-width:480px) {
+    width: 480px;
+
+  }
 }
 
-
-.nav {
+.main {
   display: flex;
   align-items: center;
 
@@ -23,21 +28,31 @@
     color: $accent;
   }
 }
-.main-nav {
+
+.main__nav {
   display: flex;
   align-items: center;
+  width: 100%;
+
+}
+
+.navigation {
+  @media screen and (max-width:768px) {
+    display: none;
+  }
 }
 
 /* список навигации header*/
 .site-nav {
   display: flex;
+  //flex-wrap: wrap;
 }
 
 .site-nav {
   &__item {
-    margin-right: 50px;
-    position: relative;
+    // margin-right: 50px;
   }
+
   &__item:last-child {
     margin-right: 0;
   }

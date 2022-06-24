@@ -1,0 +1,56 @@
+/*Кнопка бургер/крест*/
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &__cross {
+        display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        //tablet
+        display: none;
+    }
+}
+
+.menu-button.is-open .menu-button__cross {
+    display: block;
+}
+
+.menu-button.is-open .menu-button__burger {
+    display: none;
+}
+
+/*Меню*/
+.menu-container {
+    // padding: 20px;
+    font-size: 14px;
+    text-align: center;
+    background-color: aquamarine;
+
+
+    @media screen and (max-width: 767px) {
+        //mobile
+        display: none;
+
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        height: 796px;
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+        //tablet
+        display: flex;
+        /*justify-content: space-between;
+    flex-grow: 1;*/
+    }
+}

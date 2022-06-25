@@ -19,84 +19,86 @@
 
   <body>
     <!--Header-->
-    <header class="header">
-      <div class="container main">
-        <div class="main__nav">
-          <a lang="en" href="./index.html" class="main__logo link"
-            ><span class="main__web"> Web</span>Studio</a
-          >
+   <header class="header">
+  <div class="container main">
+    <nav class="main__nav">
+      <a lang="en" href="./index.html" class="main__logo link"
+        ><span class="main__web"> Web</span>Studio</a
+      >
+    </div>
+    <!--Кнопка бургер-->
+    <button type="button" 
+    class="menu-button"
+     data-menu-button>
+      <svg
+        width="40"
+        height="40"
+        aria-label="переключатель мобильного меню"
+        aria-controls="menu-container"
+      >
+        <use
+          class="menu-button__cross"
+          href="./images/icons.svg#icon-close-menu"
+        ></use>
+        <use
+          class="menu-button__burger"
+          href="./images/icons.svg#icon-menu"
+        ></use>
+      </svg>
+    </button>
+    <div class="menu-container " id="menu-container" data-menu>
+      <div class="navigation-div">
+        <div class="navigation main__nav"
+          <ul class="site-nav list">
+            <li class="site-nav__item">
+              <div class="site-nav__current-page">
+                <a
+                  href="./index.html"
+                  class="site-nav__link link site-nav__current-link"
+                  >Студия</a
+                >
+              </div>
+            </li>
+            <li class="site-nav__item">
+              <a href="./portfolio.html" class="site-nav__link link"
+                >Портфолио</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link link">Контакты</a>
+            </li>
+          </ul>
         </div>
-        <!--Кнопка бургер-->
-        <button type="button" class="menu-button is-open" data-menu-button>
-          <svg
-            width="40"
-            height="40"
-            aria-label="переключатель мобильного меню"
-            aria-controls="menu-container"
-          >
-            <use
-              class="menu-button__cross"
-              href="./images/icons.svg#icon-close-menu"
-            ></use>
-            <use
-              class="menu-button__burger"
-              href="./images/icons.svg#icon-menu"
-            ></use>
-          </svg>
-        </button>
-        <div class="menu-container is-open" id="menu-container" data-menu>
-          <div class="navigation-div">
-            <div class="navigation main__nav">
-              <ul class="site-nav list">
-                <li class="site-nav__item">
-                  <div class="site-nav__current-page">
-                    <a
-                      href="./index.html"
-                      class="site-nav__link link site-nav__current-link"
-                      >Студия</a
-                    >
-                  </div>
-                </li>
-                <li class="site-nav__item">
-                  <a href="./portfolio.html" class="site-nav__link link"
-                    >Портфолио</a
-                  >
-                </li>
-                <li class="site-nav__item">
-                  <a href="" class="site-nav__link link">Контакты</a>
-                </li>
-              </ul>
-            </div>
-            <div class="contacts main__nav">
-              <ul class="contact-nav list">
-                <li class="contact-nav__item">
-                  <a
-                    href="mailto:info@devstudio.com"
-                    class="contact-nav__link link"
-                  >
-                    <svg class="contact-nav__icon-envelope">
-                      <use href="./images/icons.svg#icon-envelope"></use>
-                    </svg>
-                    info@devstudio.com
-                  </a>
-                </li>
-                <li class="contact-nav__item">
-                  <a href="tel:+380961111111" class="contact-nav__link link">
-                    <svg class="contact-nav__icon-smartphone">
-                      <use href="./images/icons.svg#icon-smartphone"></use>
-                    </svg>
-                    +38 096 111 11 11
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div class="contacts main__nav">
+          <ul class="contact-nav list">
+            <li class="contact-nav__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contact-nav__link link"
+              >
+                <svg class="contact-nav__icon-envelope">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact-nav__item">
+              <a href="tel:+380961111111" class="contact-nav__link link">
+                <svg class="contact-nav__icon-smartphone">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
         </div>
-        <!--Меню для мобильной версии-->
       </div>
-    </header>
+    </div>
+    <!--Меню для мобильной версии-->
+  </div>
+</header>
 
-    <main>
+       <main>
       <!--Hero секция1-->
       <section class="hero section">
         <div class="container">
@@ -209,7 +211,6 @@
           <h2 class="team-name">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list__item">
-              <div class="team-name__description">
                 <picture>
                   <source
                     srcset="
@@ -234,11 +235,12 @@
                   />
                   <img
                     class="team-list__image"
-                    width="450"
+                    width="270" height="260"
                     src="./images/section-people/igor.jpg"
                     alt="Игорь Демьяненко"
                   />
                 </picture>
+                <div class="team-name__description">
                 <h3 class="team-list__member">Игорь Демьяненко</h3>
                 <p lang="en" class="team-list__text text">Product Designer</p>
                 <ul class="team-list__socials list">
@@ -275,11 +277,10 @@
                     </a>
                   </li>
                 </ul>
-              </div>
+                </div>
             </li>
             <li class="team-list__item">
-              <div class="team-name__description">
-                <picture>
+               <picture>
                   <source
                     srcset="
                       ./images/section-people/olga1x-desktop.jpg 1x,
@@ -303,11 +304,12 @@
                   />
                   <img
                     class="team-list__image"
-                    width="450"
+                    width="270" height="260"
                     src="./images/section-people/olga.jpg"
                     alt="Ольга Репина"
                   />
                 </picture>
+                <div class="team-name__description">
                 <h3 class="team-list__member">Ольга Репина</h3>
                 <p lang="en" class="team-list__text text">Frontend Developer</p>
                 <ul class="team-list__socials list">
@@ -347,7 +349,6 @@
               </div>
             </li>
             <li class="team-list__item">
-              <div class="team-name__description">
                 <picture>
                   <source
                     srcset="
@@ -372,11 +373,12 @@
                   />
                   <img
                     class="team-list__image"
-                    width="450"
+                    width="270" height="260"
                     src="./images/section-people/nikolai.jpg"
                     alt="Николай Тарасов"
                   />
                 </picture>
+             <div class="team-name__description">
                 <h3 class="team-list__member">Николай Тарасов</h3>
                 <p lang="en" class="team-list__text text">Marketing</p>
                 <ul class="team-list__socials list">
@@ -416,7 +418,6 @@
               </div>
             </li>
             <li class="team-list__item">
-              <div class="team-name__description">
                 <picture>
                   <source
                     srcset="
@@ -441,11 +442,12 @@
                   />
                   <img
                     class="team-list__image"
-                    width="450"
+                    width="270" height="260"
                     src="./images/section-people/mikhail.jpg"
                     alt="Михаил Ермаков"
                   />
                 </picture>
+                <div class="team-name__description">
                 <h3 class="team-list__member">Михаил Ермаков</h3>
                 <p lang="en" class="team-list__text text">UI Designer</p>
                 <ul class="team-list__socials list">
@@ -488,7 +490,7 @@
         </div>
       </section>
       <!-- Постоянные клиенты секция5-->
-      <section>
+      <section class="clients">
         <div class="container">
           <h2 class="constant-clients">Постоянные клиенты</h2>
           <ul class="client-galery list">
@@ -545,7 +547,7 @@
       </section>
     </main>
 
-        <!--Footer-->
+<!--Footer-->
     <footer class="footer">
       <div class="container footer__container">
         <div class="address">
@@ -632,8 +634,75 @@
       </div>
        </div>
     </footer>
+    </footer>
 
 
+    <!--Modal form window-->
+
+    <!--hw5-->
+    <div data-modal class="backdrop is-hidden">
+      <div class="backdrop__form">
+        <button data-modal-close type="button" class="backdrop__button-close">
+          <svg class="backdrop__icon-close">
+            <use href="./images/icons.svg#icon-close-button"></use>
+            button close
+          </svg>
+        </button>
+
+        <!--hw 6-->
+        <form class="js-speaker-form">
+          <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <label class="input">
+            <span class="input__name">Имя</span>
+            <input class="input__field" type="name" name="name" />
+            <svg class="input_icon">
+              <use href="./images/icons.svg#icon-person"></use>
+              icon person
+            </svg>
+          </label>
+          <label class="input">
+            <span class="input__name">Телефон</span>
+            <input class="input__field" type="phone" name="phone" />
+            <svg class="input_icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+              icon phone
+            </svg>
+          </label>
+          <label class="input">
+            <span class="input__named">Почта</span>
+            <input class="input__field" type="email" name="email" />
+            <svg class="input_icon">
+              <use href="./images/icons.svg#icon-email"></use>
+              icon email
+            </svg>
+          </label>
+          <label class="input">
+            <span class="input__name">Комментарий</span>
+            <textarea
+              class="input__field input__textarea"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+          </label>
+
+          <!--checkbox-->
+          <label class="checkbox-label">
+            <input class="checkbox" type="checkbox" name="checkbox" />
+            <svg class="checkbox__icon">
+              <use href="./images/icons.svg#icon-check"></use>
+              icon check
+            </svg>
+            <span class="checkbox__field">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="checkbox__conditions" href="">Условия договора</a>
+            </span>
+          </label>
+
+          <button type="submit" class="checkbox__button">Отправить</button>
+        </form>
+      </div>
+    </div>
 
     <!--добавляем скрипт из ДЗ 5 для модалки-->
     <script src="./js/modal.js"></script>

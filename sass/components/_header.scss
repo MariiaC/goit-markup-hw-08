@@ -1,9 +1,7 @@
-/*page-header*/
-
 .header {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media screen and (min-width:480px) {
     width: 480px;
@@ -45,7 +43,7 @@
 /* список навигации header*/
 .site-nav {
   display: flex;
-  //flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .site-nav {

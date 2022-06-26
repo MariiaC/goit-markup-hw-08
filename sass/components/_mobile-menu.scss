@@ -81,7 +81,8 @@
             color: $accent;
         }
 
-        &--current {
+        &--current,
+        &--accent {
             color: $accent;
         }
     }

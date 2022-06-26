@@ -1,30 +1,23 @@
+/*page-header*/
+
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
   position: relative;
 
   @media screen and (min-width: 768px) {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
+}
+
+.logo__nav {
+  display: flex;
 }
 
 .main {
   display: flex;
   align-items: center;
-  //flex-grow: 1;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
-    //justify-content: center;
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
 
   &__logo {
     color: $primary-text;
@@ -32,7 +25,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
-    //margin-right: 93px;
+
 
     @media screen and (min-width: 1200px) {
       font-size: 26px;
@@ -45,24 +38,10 @@
   }
 }
 
-
-
-/*.main__nav {
+.main__nav {
   display: flex;
   align-items: center;
-  width: 100%;
 
-}
-
-.navigation {
-  @media screen and (max-width:768px) {
-    display: none;
-  }
-}*/
-
-/* список навигации header*/
-.site-nav {
-  display: none;
 
   @media screen and (min-width: 768px) {
     display: flex;
@@ -75,171 +54,163 @@
     display: flex;
     margin-left: 93px;
   }
+}
 
-  &__item:not(:last-child) {
+/* список навигации header*/
+.site-nav {
+  display: flex;
+}
+
+.site-nav {
+  &__item {
     margin-right: 50px;
-
+    position: relative;
   }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+}
+
+.site-nav {
 
   &__link {
     color: $primary-text;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     /*Переход*/
     transition: color 250ms $timng-function;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
     &:hover,
-    &:active,
     &:focus {
       color: $accent;
-    }
-  }
-
-  &__current-link {
-    color: $accent;
-    position: relative;
-
-    &::after {
-      content: "";
-      width: 100%;
-      height: 4px;
-      position: absolute;
-      display: inline-block;
-      border-radius: 2px;
-      background-color: $accent;
-      bottom: 0;
-      left: 0;
     }
   }
 }
 
 /* список контактов header*/
 .contact-nav {
-  display: none;
+  display: flex;
+  margin-left: auto;
 
   @media screen and (min-width: 768px) {
     display: block;
     margin-left: auto;
+
+    &__item:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    margin-left: auto;
+    justify-content: center;
 
-    */ &__item:not(:last-child) {
+    &__item:not(:last-child) {
       margin-right: 30px;
     }
   }
+}
 
-  /*иконки header*/
-  .contact-nav {
+.contact-nav {
+  &__link {
+    display: flex;
+    /* color: $secondary-text;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $timng-function;*/
+
+    &:hover,
+    &active,
+    &:focus {
+      color: $accent;
+    }
+
+    @media screen and (min-width: 768px) {
+      color: $secondary-text;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+
+      transition: color 250ms $timng-function;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+    }
+  }
+}
+
+/*иконки header*/
+.contact-nav {
+  @media screen and(min-width:768px) {
     &__icon-envelope {
-      @media screen and (min-width: 768px) {
-        width: 14px;
-        height: 10px;
-        margin-right: 8px;
-      }
-
-      @media screen and (min-width: 1200px) {
-        width: 16px;
-        height: 12px;
-        margin-right: 10px;
-        fill: $secondary-text;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      /*width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: currentColor;*/
+      width: 14px;
+      height: 10px;
+      margin-right: 8px;
+      fill: currentColor;
     }
 
     &__icon-smartphone {
-      @media screen and (min-width: 768px) {
-        width: 14px;
-        height: 10px;
-        margin-right: 8px;
-      }
-
-      @media screen and (min-width: 1200px) {
-        width: 16px;
-        height: 12px;
-        margin-right: 10px;
-        fill: $secondary-text;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
-
-      /*width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    fill: currentColor;*/
+      width: 10px;
+      height: 14px;
+      margin-right: 8px;
+      fill: currentColor;
     }
   }
 
+}
 
-  .contact-nav {
-    &__item {
-      @media screen and (min-width: 768px) {
-        &:not(:last-child) {
-          margin-bottom: 10px;
-        }
-      }
+/*Подчеркивание*/
 
-      @media screen and (min-width: 1200px) {
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-      }
+.site-nav {
+  &__current-page {
+    display: block;
+    position: relative;
+  }
+}
 
-      */ &__link {
-        @media screen and (min-width: 768px) {
-          color: $secondary-text;
-          text-decoration: none;
-          font-weight: 500;
-          font-size: 12px;
-          line-height: 1.14;
-          letter-spacing: 0.02em;
+.site-nav {
+  &__current-link::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: $accent;
+    border-radius: 2px;
+    left: 0;
+    bottom: -36px;
+  }
+}
 
-          transition: color 250ms $timng-function;
-        }
+.navigation-div {
+  text-align: center;
 
-        @media screen and (min-width: 1200px) {
-          font-size: 14px;
-        }
+  @media screen and (max-width:767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
-        &:hover,
-        &:active,
-        &:focus {
-          color: $accent;
-        }
-      }
-    }
-
-    /*Подчеркивание*/
-
-    .site-nav {
-      &__current-page {
-        display: block;
-        position: relative;
-      }
-    }
-
-    .site-nav {
-      &__current-link::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        background-color: var(--accent-color);
-        border-radius: 2px;
-        left: 0;
-        bottom: -31px;
-      }
+    &.is-open {
+      display: block;
     }
   }
+
+  @media screen and (min-width:768px) {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+}

@@ -15,16 +15,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./js/mobile-menu.js">
+    <link rel="stylesheet" href="./js/modal.js">
   </head>
 
   <body>
-    <!--Header-->
-   <header class="header">
+   <!--Header-->
+ <header class="header">
   <div class="container main">
-    <nav class="main__nav">
-      <a lang="en" href="./index.html" class="main__logo link"
-        ><span class="main__web"> Web</span>Studio</a
-      >
+    <nav class="logo__nav">
+      <a lang="en" href="./index.html" class="main__logo link">
+        <span class="main__web"> Web</span>Studio
+      </a>
       </nav>
     <!--Кнопка бургер-->
     <button type="button" 
@@ -94,7 +96,6 @@
        </ul>
   </div>
 <!--Конец мобильного меню-->
-
       <div class="navigation-div">
         <div class="navigation main__nav">
           <ul class="site-nav list">
@@ -144,6 +145,7 @@
     </div>
     </div>
 </header>
+
 
        <main>
       <!--Hero секция1-->
@@ -782,6 +784,7 @@
     </script>
 
     <script>
+      
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');

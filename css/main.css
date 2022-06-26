@@ -74,6 +74,7 @@ body {
   }
 }
 
+/*page-header*/
 .header {
   padding-top: 16px;
   padding-bottom: 16px;
@@ -81,25 +82,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
+}
+
+.logo__nav {
+  display: flex;
 }
 
 .main {
   display: flex;
   align-items: center;
-  /*@media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }*/
-}
-@media screen and (min-width: 768px) {
-  .main {
-    display: flex;
-    align-items: center;
-  }
 }
 .main__logo {
   color: #212121;
@@ -118,144 +112,92 @@ body {
   color: #2196f3;
 }
 
-/*.main__nav {
+.main__nav {
   display: flex;
   align-items: center;
-  width: 100%;
-
-}
-
-.navigation {
-  @media screen and (max-width:768px) {
-    display: none;
-  }
-}*/
-/* список навигации header*/
-.site-nav {
-  display: none;
-  /*@media screen and (min-width: 1200px) {
-    display: flex;
-    margin-left: 93px;
-  }*/
 }
 @media screen and (min-width: 768px) {
-  .site-nav {
+  .main__nav {
     display: flex;
     margin-left: 88px;
     justify-content: space-between;
     align-items: center;
   }
 }
-.site-nav__item:not(:last-child) {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .main__nav {
+    display: flex;
+    margin-left: 93px;
+  }
 }
+
+/* список навигации header*/
+.site-nav {
+  display: flex;
+}
+
+.site-nav__item {
+  margin-right: 50px;
+  position: relative;
+}
+.site-nav__item:last-child {
+  margin-right: 0;
+}
+
 .site-nav__link {
   color: #212121;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   /*Переход*/
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
-.site-nav__link:hover, .site-nav__link:active, .site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
-}
-.site-nav__current-link {
-  color: #2196f3;
-  position: relative;
-}
-.site-nav__current-link::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  display: inline-block;
-  border-radius: 2px;
-  background-color: #2196f3;
-  bottom: 0;
-  left: 0;
 }
 
 /* список контактов header*/
 .contact-nav {
-  display: none;
-  /* @media screen and (min-width: 1200px) {
-    display: flex;
-    margin-left: auto;*/
-  /* &__item:not(:last-child) {
-    margin-right: 30px;
-  }*/
+  display: flex;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .contact-nav {
     display: block;
     margin-left: auto;
   }
-}
-
-/*иконки header*/
-.contact-nav__icon-envelope {
-  /*@media screen and (min-width: 1200px) {
-      width: 16px;
-      height: 12px;
-      margin-right: 10px;
-      fill: $secondary-text;
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }*/
-  /*width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  fill: currentColor;*/
-}
-@media screen and (min-width: 768px) {
-  .contact-nav__icon-envelope {
-    width: 14px;
-    height: 10px;
-    margin-right: 8px;
-  }
-}
-.contact-nav__icon-smartphone {
-  /* @media screen and (min-width: 1200px) {
-      width: 16px;
-      height: 12px;
-      margin-right: 10px;
-      fill: $secondary-text;
-      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }*/
-  /*width: 10px;
-  height: 16px;
-  margin-right: 10px;
-  fill: currentColor;*/
-}
-@media screen and (min-width: 768px) {
-  .contact-nav__icon-smartphone {
-    width: 14px;
-    height: 10px;
-    margin-right: 8px;
-  }
-}
-
-.contact-nav {
-  /*Подчеркивание*/
-}
-.contact-nav__item {
-  /*@media screen and (min-width: 1200px) {
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-    }*/
-}
-@media screen and (min-width: 768px) {
   .contact-nav__item:not(:last-child) {
     margin-bottom: 10px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .contact-nav {
+    display: flex;
+    justify-content: center;
+  }
+  .contact-nav__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.contact-nav__link {
+  display: flex;
+  /* color: $secondary-text;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms $timng-function;*/
+}
+.contact-nav__link:hover, .contact-nav__linkactive, .contact-nav__link:focus {
+  color: #2196f3;
+}
 @media screen and (min-width: 768px) {
-  .contact-nav__item__link {
+  .contact-nav__link {
     color: #757575;
     text-decoration: none;
     font-weight: 500;
@@ -266,27 +208,66 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .contact-nav__item__link {
+  .contact-nav__link {
     font-size: 14px;
   }
 }
-.contact-nav__item__link:hover, .contact-nav__item__link:active, .contact-nav__item__link:focus {
-  color: #2196f3;
+
+/*иконки header*/
+@media screen and (min-width: 768px) {
+  .contact-nav__icon-envelope {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
+  .contact-nav__icon-smartphone {
+    width: 10px;
+    height: 14px;
+    margin-right: 8px;
+    fill: currentColor;
+  }
 }
-.contact-nav .site-nav__current-page {
+
+/*Подчеркивание*/
+.site-nav__current-page {
   display: block;
   position: relative;
 }
-.contact-nav .site-nav__current-link::after {
+
+.site-nav__current-link::after {
   content: "";
   display: block;
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: var(--accent-color);
+  background-color: #2196f3;
   border-radius: 2px;
   left: 0;
-  bottom: -31px;
+  bottom: -36px;
+}
+
+.navigation-div {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .navigation-div {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .navigation-div.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navigation-div {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
 }
 
 /*первая секция Hero*/
@@ -1209,7 +1190,7 @@ body {
 .mobile-nav__item:hover, .mobile-nav__item:active, .mobile-nav__item:focus {
   color: #2196f3;
 }
-.mobile-nav__item--current {
+.mobile-nav__item--current, .mobile-nav__item--accent {
   color: #2196f3;
 }
 

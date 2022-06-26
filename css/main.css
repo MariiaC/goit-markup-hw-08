@@ -89,20 +89,16 @@ body {
 .main {
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  /*@media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }*/
 }
 @media screen and (min-width: 768px) {
   .main {
     display: flex;
     align-items: center;
-    justify-content: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .main {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
   }
 }
 .main__logo {
@@ -122,35 +118,6 @@ body {
   color: #2196f3;
 }
 
-.menu-button {
-  display: inline-flex;
-  margin-left: auto;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  z-index: 2;
-}
-.menu-button__cross, .menu-button__burger {
-  padding: 12px 8px;
-}
-.menu-button__cross {
-  display: none;
-}
-.menu-button.is-open .menu-button__cross {
-  display: block;
-}
-.menu-button__burger {
-  display: block;
-}
-.menu-button.is-open .menu-button__burger {
-  display: none;
-}
-@media screen and (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-}
-
 /*.main__nav {
   display: flex;
   align-items: center;
@@ -166,6 +133,10 @@ body {
 /* список навигации header*/
 .site-nav {
   display: none;
+  /*@media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: 93px;
+  }*/
 }
 @media screen and (min-width: 768px) {
   .site-nav {
@@ -173,12 +144,6 @@ body {
     margin-left: 88px;
     justify-content: space-between;
     align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .site-nav {
-    display: flex;
-    margin-left: 93px;
   }
 }
 .site-nav__item:not(:last-child) {
@@ -218,6 +183,9 @@ body {
 /* список контактов header*/
 .contact-nav {
   display: none;
+  /* @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;*/
   /* &__item:not(:last-child) {
     margin-right: 30px;
   }*/
@@ -228,46 +196,88 @@ body {
     margin-left: auto;
   }
 }
-@media screen and (min-width: 1200px) {
-  .contact-nav {
-    display: flex;
-  }
-}
 
 /*иконки header*/
 .contact-nav__icon-envelope {
-  width: 16px;
+  /*@media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+      margin-right: 10px;
+      fill: $secondary-text;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }*/
+  /*width: 16px;
   height: 12px;
   margin-right: 10px;
-  fill: currentColor;
+  fill: currentColor;*/
+}
+@media screen and (min-width: 768px) {
+  .contact-nav__icon-envelope {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+  }
 }
 .contact-nav__icon-smartphone {
-  width: 10px;
+  /* @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+      margin-right: 10px;
+      fill: $secondary-text;
+      transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }*/
+  /*width: 10px;
   height: 16px;
   margin-right: 10px;
-  fill: currentColor;
+  fill: currentColor;*/
+}
+@media screen and (min-width: 768px) {
+  .contact-nav__icon-smartphone {
+    width: 14px;
+    height: 10px;
+    margin-right: 8px;
+  }
 }
 
-.contact-nav__link {
-  display: flex;
-  color: #757575;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.contact-nav {
+  /*Подчеркивание*/
 }
-.contact-nav__link:hover, .contact-nav__link:focus {
+.contact-nav__item {
+  /*@media screen and (min-width: 1200px) {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }*/
+}
+@media screen and (min-width: 768px) {
+  .contact-nav__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-nav__item__link {
+    color: #757575;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-nav__item__link {
+    font-size: 14px;
+  }
+}
+.contact-nav__item__link:hover, .contact-nav__item__link:active, .contact-nav__item__link:focus {
   color: #2196f3;
 }
-
-/*Подчеркивание*/
-.site-nav__current-page {
+.contact-nav .site-nav__current-page {
   display: block;
   position: relative;
 }
-
-.site-nav__current-link::after {
+.contact-nav .site-nav__current-link::after {
   content: "";
   display: block;
   position: absolute;
@@ -454,7 +464,7 @@ body {
 .responsibilities {
   padding-top: 0;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
   .responsibilities {
     display: none;
   }
@@ -465,7 +475,8 @@ body {
   font-size: 36px;
   line-height: 1.2;
   text-align: center;
-  margin-bottom: 50px;
+  margin-top: 94px;
+  margin-bottom: 94px;
 }
 
 .responsibilities-list {
@@ -524,7 +535,7 @@ body {
   .constant-clients {
     margin-bottom: 50px;
     font-size: 36px;
-    line-height: 1.17;
+    line-height: 1.2;
   }
 }
 
@@ -553,7 +564,11 @@ body {
   .client-galery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+  .client-galery__item:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -595,6 +610,7 @@ body {
 @media screen and (min-width: 1200px) {
   .client-galery__item {
     width: 170px;
+    height: 92px;
     margin-bottom: 0;
   }
   .client-galery__item:nth-child(2n) {
@@ -638,40 +654,30 @@ body {
 }
 
 .icon-tagline-here {
-  width: 40x;
-  height: 52px;
   background-position: center;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-company {
-  width: 43x;
-  height: 41px;
   background-position: center;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-foster-peters {
-  width: 84x;
-  height: 41px;
   background-position: center;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-brand {
-  width: 63x;
-  height: 45px;
   background-position: center;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-tag-line {
-  width: 94px;
-  height: 44px;
   background-position: center;
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -788,9 +794,6 @@ body {
 .team-list__item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.team-list__item:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .team-list__socials-item:not(:last-child) {
@@ -1052,8 +1055,9 @@ body {
 
 .checkbox-label {
   position: relative;
-  display: flex;
+  text-align: center;
   align-items: center;
+  justify-content: center;
 }
 
 .checkbox {
@@ -1128,6 +1132,35 @@ body {
 .checkbox__button:hover, .checkbox__button:focus, .checkbox__button:active {
   background-color: #188ce8;
   cursor: pointer;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  z-index: 2;
+}
+.menu-button__cross, .menu-button__burger {
+  padding: 12px 8px;
+}
+.menu-button__cross {
+  display: none;
+}
+.menu-button.is-open .menu-button__cross {
+  display: block;
+}
+.menu-button__burger {
+  display: block;
+}
+.menu-button.is-open .menu-button__burger {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 }
 
 .menu {
@@ -1252,6 +1285,7 @@ body {
   .galery {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 .galery .galery__item {
@@ -1272,7 +1306,6 @@ body {
   .galery .galery__item {
     width: 100%;
     max-width: 354px;
-    margin-right: 30px;
     margin-bottom: 0;
   }
 }
@@ -1500,7 +1533,6 @@ body {
 @media screen and (min-width: 1200px) {
   .address {
     text-align: start;
-    margin-right: 70px;
     margin-bottom: 0;
     flex-shrink: 0;
   }
@@ -1659,6 +1691,7 @@ body {
 
 .footer-field {
   width: 100%;
+  padding: 0;
   /* display: flex;
   flex-wrap: wrap;
   width: 570px;
@@ -1733,6 +1766,32 @@ body {
   .footer-form__input {
     width: 358px;
     margin-right: 12px;
+  }
+}
+
+.adjust-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .wrap-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .join-container {
+    margin-left: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .join-container {
+    margin-left: 70px;
+    margin-right: 93px;
   }
 }
 

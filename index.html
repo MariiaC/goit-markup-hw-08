@@ -549,7 +549,7 @@
 
 <!--Footer-->
     <footer class="footer">
-      <div class="container footer__container">
+      <div class="container footer__container">  <!--page-footer__wrapper-->
         <div class="address">
           <a lang="en" href="./index.html" class="address__logo link"
             ><span class="address__web-logo">Web</span>
@@ -618,12 +618,13 @@
         </div>
 
         <!--FOOTER Форма ДЗ 6-->
-<form class="footer-form container">
-  <div class="footer-field container">
-  <h3 class="footer-form__sign-in">подпишитесь на рассылку</h3>
-  <label for="email"></label>
+        <div class="footer-field container">
+      <h3 class="join">подпишитесь на рассылку</h3>  
+  <form class="footer-form container">
+  <label for="email" class="footer-form__email">
   <input class="footer-form__input" type="email" name="email" id="email" placeholder="E-mail">
-  </div>
+  </label>
+</div>
   <button type="submit" class="footer-form__button">Подписаться
   <svg class="footer-form__send">
   <use href="./images/icons.svg#icon-send">
@@ -638,12 +639,11 @@
 
 
     <!--Modal form window-->
-
     <!--hw5-->
-    <div data-modal class="backdrop is-hidden">
-      <div class="backdrop__form">
+    <div data-modal class="backdrop is-hidden" data-backdrop>
+      <div class="backdrop__form" data-modal="">
         <button data-modal-close type="button" class="backdrop__button-close">
-          <svg class="backdrop__icon-close">
+          <svg class="backdrop__icon-close" width="11" height="11">
             <use href="./images/icons.svg#icon-close-button"></use>
             button close
           </svg>
@@ -652,6 +652,8 @@
         <!--hw 6-->
         <form class="js-speaker-form">
           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+    
+          <div class="js-speaker-form__content">
           <label class="input">
             <span class="input__name">Имя</span>
             <input class="input__field" type="name" name="name" />
@@ -659,6 +661,7 @@
               <use href="./images/icons.svg#icon-person"></use>
               icon person
             </svg>
+
           </label>
           <label class="input">
             <span class="input__name">Телефон</span>
@@ -667,26 +670,28 @@
               <use href="./images/icons.svg#icon-phone"></use>
               icon phone
             </svg>
+
           </label>
           <label class="input">
-            <span class="input__named">Почта</span>
+            <span class="input__name">Почта</span>
             <input class="input__field" type="email" name="email" />
             <svg class="input_icon">
               <use href="./images/icons.svg#icon-email"></use>
               icon email
             </svg>
           </label>
+
           <label class="input">
             <span class="input__name">Комментарий</span>
             <textarea
               class="input__field input__textarea"
-              cols="30"
-              rows="10"
+             
               placeholder="Введите текст"
             ></textarea>
           </label>
-
+</div>
           <!--checkbox-->
+           <div class="checkbox-content">
           <label class="checkbox-label">
             <input class="checkbox" type="checkbox" name="checkbox" />
             <svg class="checkbox__icon">
@@ -698,6 +703,7 @@
               <a class="checkbox__conditions" href="">Условия договора</a>
             </span>
           </label>
+          </div>
 
           <button type="submit" class="checkbox__button">Отправить</button>
         </form>

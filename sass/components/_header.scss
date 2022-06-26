@@ -20,11 +20,11 @@
     //justify-content: center;
   }
 
-  /*@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-  }*/
+  }
 
   &__logo {
     color: $primary-text;
@@ -45,7 +45,7 @@
   }
 }
 
-.navigation-div {}
+
 
 /*.main__nav {
   display: flex;
@@ -71,10 +71,10 @@
     align-items: center;
   }
 
-  /*@media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     margin-left: 93px;
-  }*/
+  }
 
   &__item:not(:last-child) {
     margin-right: 50px;
@@ -127,120 +127,119 @@
     margin-left: auto;
   }
 
-  /* @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
-    margin-left: auto;*/
+    margin-left: auto;
 
-  /* &__item:not(:last-child) {
-    margin-right: 30px;
-  }*/
-}
-
-/*иконки header*/
-.contact-nav {
-  &__icon-envelope {
-    @media screen and (min-width: 768px) {
-      width: 14px;
-      height: 10px;
-      margin-right: 8px;
+    */ &__item:not(:last-child) {
+      margin-right: 30px;
     }
-
-    /*@media screen and (min-width: 1200px) {
-        width: 16px;
-        height: 12px;
-        margin-right: 10px;
-        fill: $secondary-text;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }*/
-
-    /*width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: currentColor;*/
   }
 
-  &__icon-smartphone {
-    @media screen and (min-width: 768px) {
-      width: 14px;
-      height: 10px;
-      margin-right: 8px;
-    }
-
-    /* @media screen and (min-width: 1200px) {
-        width: 16px;
-        height: 12px;
-        margin-right: 10px;
-        fill: $secondary-text;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }*/
-
-    /*width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    fill: currentColor;*/
-  }
-}
-
-
-.contact-nav {
-  &__item {
-    @media screen and (min-width: 768px) {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
-    }
-
-    /*@media screen and (min-width: 1200px) {
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-      }*/
-
-
-    &__link {
+  /*иконки header*/
+  .contact-nav {
+    &__icon-envelope {
       @media screen and (min-width: 768px) {
-        color: $secondary-text;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-
-        transition: color 250ms $timng-function;
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
       }
 
       @media screen and (min-width: 1200px) {
-        font-size: 14px;
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        fill: $secondary-text;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-      &:hover,
-      &:active,
-      &:focus {
-        color: $accent;
+      /*width: 16px;
+    height: 12px;
+    margin-right: 10px;
+    fill: currentColor;*/
+    }
+
+    &__icon-smartphone {
+      @media screen and (min-width: 768px) {
+        width: 14px;
+        height: 10px;
+        margin-right: 8px;
+      }
+
+      @media screen and (min-width: 1200px) {
+        width: 16px;
+        height: 12px;
+        margin-right: 10px;
+        fill: $secondary-text;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /*width: 10px;
+    height: 16px;
+    margin-right: 10px;
+    fill: currentColor;*/
+    }
+  }
+
+
+  .contact-nav {
+    &__item {
+      @media screen and (min-width: 768px) {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+
+      @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+
+      */ &__link {
+        @media screen and (min-width: 768px) {
+          color: $secondary-text;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 1.14;
+          letter-spacing: 0.02em;
+
+          transition: color 250ms $timng-function;
+        }
+
+        @media screen and (min-width: 1200px) {
+          font-size: 14px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $accent;
+        }
+      }
+    }
+
+    /*Подчеркивание*/
+
+    .site-nav {
+      &__current-page {
+        display: block;
+        position: relative;
+      }
+    }
+
+    .site-nav {
+      &__current-link::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: var(--accent-color);
+        border-radius: 2px;
+        left: 0;
+        bottom: -31px;
       }
     }
   }
-
-  /*Подчеркивание*/
-
-  .site-nav {
-    &__current-page {
-      display: block;
-      position: relative;
-    }
-  }
-
-  .site-nav {
-    &__current-link::after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      background-color: var(--accent-color);
-      border-radius: 2px;
-      left: 0;
-      bottom: -31px;
-    }
-  }
-}

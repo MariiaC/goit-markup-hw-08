@@ -25,7 +25,6 @@
       <a lang="en" href="./index.html" class="main__logo link"
         ><span class="main__web"> Web</span>Studio</a
       >
-    </div>
     <!--Кнопка бургер-->
     <button type="button" 
     class="menu-button"
@@ -46,9 +45,57 @@
         ></use>
       </svg>
     </button>
-    <div class="menu-container " id="menu-container" data-menu>
+    <!--Меню для мобильной версии-->
+    <div class="menu" id="menu-container" data-menu>
+      <ul class="mobile-nav">
+      <li class="mobile-nav__list">
+          <a href="./index.html"
+               class="mobile-nav__item mobile-nav__item--current">Студия</a>
+      </li>
+      <li class="mobile-nav__list">
+          <a href="./portfolio.html" class="mobile-nav__item">Портфолио</a>
+      </li>
+      <li class="mobile-nav__list">
+          <a href="./index.html" class="mobile-nav__item">Контакты</a>
+      </li>
+      </ul>
+
+       <ul class="mobile-contacts">
+      <li class="mobile-nav__list">
+           <a href="tel:+380961111111" class="mobile-nav__item mobile-nav__item--accent">
+               +38 096 111 11 11
+           </a>
+      </li>
+      <li class="mobile-nav__list">
+           <a href="mailto:info@devstudio.com" class="mobile-nav__item">
+              info@devstudio.com
+           </a>
+       </li>
+      </ul>
+
+      <ul class="mobile-socials">
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Instagram
+               </a>
+          </li>
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Twitter
+              </a>
+          </li>
+           <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Facebook
+               </a>
+           </li>
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> LinkedIn
+              </a>
+          </li>
+       </ul>
+  </div>
+<!--Конец мобильного меню-->
+
       <div class="navigation-div">
-        <div class="navigation main__nav"
+        <div class="navigation main__nav">
           <ul class="site-nav list">
             <li class="site-nav__item">
               <div class="site-nav__current-page">
@@ -94,8 +141,7 @@
         </div>
       </div>
     </div>
-    <!--Меню для мобильной версии-->
-  </div>
+    </div>
 </header>
 
        <main>

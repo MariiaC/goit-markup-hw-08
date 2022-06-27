@@ -14,50 +14,136 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./js/mobile-menu.js">
   </head>
   <body>
+
     <!--Header-->
-    <header class="header bottomline">
-      <div class="container nav">
-        <nav class="main-nav">
-          <a lang="en" href="./index.html" class="nav__logo link"
-            ><span class="nav__web"> Web</span>Studio</a
-          >
+    <header class="header page-header-portfolio">
+  <div class="container main">
+    <nav class="logo__nav">
+      <a lang="en" href="./index.html" class="main__logo link">
+        <span class="main__web"> Web</span>Studio
+      </a>
+      </nav>
+    <!--Кнопка бургер-->
+    <button type="button" 
+    class="menu-button"
+     data-menu-button>
+      <svg
+        width="40"
+        height="40"
+        aria-label="переключатель мобильного меню"
+        aria-controls="menu-container"
+      >
+        <use
+          class="menu-button__cross"
+          href="./images/icons.svg#icon-close-menu"
+        ></use>
+        <use
+          class="menu-button__burger"
+          href="./images/icons.svg#icon-menu"
+        ></use>
+      </svg>
+    </button>
+    <!--Меню для мобильной версии-->
+    <div class="menu" id="menu-container" data-menu>
+      <ul class="mobile-nav">
+      <li class="mobile-nav__list">
+          <a href="./index.html"
+               class="mobile-nav__item mobile-nav__item--current">Студия</a>
+      </li>
+      <li class="mobile-nav__list">
+          <a href="./portfolio.html" class="mobile-nav__item">Портфолио</a>
+      </li>
+      <li class="mobile-nav__list">
+          <a href="./index.html" class="mobile-nav__item">Контакты</a>
+      </li>
+      </ul>
+
+       <ul class="mobile-contacts">
+      <li class="mobile-nav__list">
+           <a href="tel:+380961111111" class="mobile-nav__item mobile-nav__item--accent">
+               +38 096 111 11 11
+           </a>
+      </li>
+      <li class="mobile-nav__list">
+           <a href="mailto:info@devstudio.com" class="mobile-nav__item">
+              info@devstudio.com
+           </a>
+       </li>
+      </ul>
+
+      <ul class="mobile-socials">
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Instagram
+               </a>
+          </li>
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Twitter
+              </a>
+          </li>
+           <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> Facebook
+               </a>
+           </li>
+          <li class="mobile-socials__list">
+               <a href="" class="mobile-socials__item"> LinkedIn
+              </a>
+          </li>
+       </ul>
+  </div>
+<!--Конец мобильного меню-->
+      <div class="navigation-div">
+        <div class="navigation main__nav">
           <ul class="site-nav list">
             <li class="site-nav__item">
-            <a href="./index.html" class="site-nav__link link ">Студия</a>
+              <div class="site-nav__current-page">
+                <a
+                  href="./index.html"
+                  class="site-nav__link link "
+                  >Студия</a
+                >
+              </div>
             </li>
             <li class="site-nav__item">
-              <div class="site-nav__current-page">
               <a href="./portfolio.html" class="site-nav__link link site-nav__current-link"
-                >Портфолио</a>
-                </div>  
+                >Портфолио</a
+              >
             </li>
             <li class="site-nav__item">
               <a href="" class="site-nav__link link">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <ul class="contact-nav list">
-          <li class="contact-nav__item">
-            <a href="mailto:info@devstudio.com" class="contact-nav__link link">
-              <svg class="contact-nav__icon-envelope">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contact-nav__item">
-            <a href="tel:+380961111111" class="contact-nav__link link">
-              <svg class="contact-nav__icon-smartphone">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
+        <div class="contacts main__nav">
+          <ul class="contact-nav list">
+            <li class="contact-nav__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="contact-nav__link link"
+              >
+                <svg class="contact-nav__icon-envelope">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contact-nav__item">
+              <a href="tel:+380961111111" class="contact-nav__link link">
+                <svg class="contact-nav__icon-smartphone">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </header>
+    </div>
+    </div>
+</header>
+
     <!--Main - the only one section-->
     <main>
       <section class="portfolio">
@@ -512,7 +598,8 @@
 
 <!--Footer-->
     <footer class="footer">
-      <div class="container footer__container">
+      <div class="container footer__container">  
+        <div class="wrap-container">
         <div class="address">
           <a lang="en" href="./index.html" class="address__logo link"
             ><span class="address__web-logo">Web</span>
@@ -579,24 +666,45 @@
             </li>
           </ul>
         </div>
+        </div>
 
         <!--FOOTER Форма ДЗ 6-->
-<form class="footer-form container">
-  <div class="footer-field container">
-  <h3 class="footer-form__sign-in">подпишитесь на рассылку</h3>
-  <label for="email"></label>
+        <div class="adjust-container">
+        <div class="footer-field container">
+      <h3 class="join">подпишитесь на рассылку</h3>  
+  <form class="footer-form container">
+  <label for="email" class="footer-form__email">
   <input class="footer-form__input" type="email" name="email" id="email" placeholder="E-mail">
-  </div>
+  </label>
+</div>
   <button type="submit" class="footer-form__button">Подписаться
   <svg class="footer-form__send">
   <use href="./images/icons.svg#icon-send">
   </use>
   </svg>
   </button>
-</form>
+      </div>
+    </form>
       </div>
        </div>
     </footer>
 
+ <script>
+      
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
+
+        menuBtnRef.addEventListener('click', () => {
+          const expanded =
+            menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
+
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
+    </script>
   </body>
 </html>

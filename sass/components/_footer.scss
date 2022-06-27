@@ -19,6 +19,7 @@
 
     @media screen and (min-width: 1200px) {
       display: flex;
+      align-items: baseline;
       justify-content: flex-start;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -210,10 +211,11 @@
 
   &__email {
     margin-bottom: 20px;
-    min-width: 450px;
+    width: 100%;
 
     @media screen and (min-width: 1200px) {
       margin-bottom: 0;
+      margin-right: 12px;
     }
 
   }
@@ -229,10 +231,6 @@
 .footer-field {
   width: 100%;
   padding: 0;
-
-  @media screen and (min-width: 768px) {
-    max-width: 450px;
-  }
 
   /* display: flex;
   flex-wrap: wrap;
@@ -286,13 +284,14 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 358px;
-    margin-right: 12px;
+    max-width: 100%;
+    //margin-right: 12px;
   }
 }
 
 .adjust-container {
-
+  max-width: 582px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -303,7 +302,8 @@
   @media screen and (min-width:768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: baseline;
+    //justify-content: baseline;
+    align-items: baseline;
   }
 }
 

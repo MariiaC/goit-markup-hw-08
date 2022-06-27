@@ -1,6 +1,7 @@
 /*третья секция responsibilities*/
 .responsibilities {
   padding-top: 0;
+  padding-bottom: 94px;
 
   @media screen and (max-width:1199px) {
     display: none;
@@ -13,7 +14,7 @@
   line-height: 1.2;
   text-align: center;
   margin-top: 94px;
-  margin-bottom: 94px;
+  margin-bottom: 50px;
 }
 
 .responsibilities-list {

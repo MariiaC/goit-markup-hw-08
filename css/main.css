@@ -1308,28 +1308,28 @@ body {
   }
 }
 
-.galery__item__item:not(:last-child) {
+.galery__item:not(:last-child) {
   margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
-  .galery__item__item:not(:last-child):nth-child(2n) {
+  .galery__item:not(:last-child):nth-child(2n) {
     margin-right: 0;
   }
-  .galery__item__item:not(:last-child):nth-child(-n+2) {
+  .galery__item:not(:last-child):nth-child(-n+2) {
     margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .galery__item__item:not(:last-child):nth-child(2n) {
+  .galery__item:not(:last-child):nth-child(2n) {
     margin-right: 30px;
   }
-  .galery__item__item:not(:last-child):nth-child(-n+2) {
+  .galery__item:not(:last-child):nth-child(-n+2) {
     margin-bottom: 30px;
   }
-  .galery__item__item:not(:last-child):nth-child(3n) {
+  .galery__item:not(:last-child):nth-child(3n) {
     margin-right: 0;
   }
-  .galery__item__item:not(:last-child):nth-last-child(-n+3) {
+  .galery__item:not(:last-child):nth-last-child(-n+3) {
     margin-bottom: 0;
   }
 }

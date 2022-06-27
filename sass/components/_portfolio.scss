@@ -72,7 +72,7 @@
 }
 
 .galery__item {
-  &__item:not(:last-child) {
+  &:not(:last-child) {
     margin-bottom: 30px;
 
     @media screen and (min-width: 768px) {
